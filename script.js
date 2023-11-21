@@ -1,26 +1,22 @@
-// script.js
 function showDetails(companyName) {
-    // Add logic to display more information about the clicked company
     alert(`More details about ${companyName}`);
-  }
+}
   
-  // Dark Mode Toggle
-  const toggleMode = document.getElementById('toggle-mode');
-  const body = document.body;
+const toggleMode = document.getElementById('toggle-mode');
+const body = document.body;
   
-  toggleMode.addEventListener('change', () => {
+toggleMode.addEventListener('change', () => {
     body.classList.toggle('dark-mode');
     const modeLabel = document.querySelector('.mode-label');
     modeLabel.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-  });
+});
   
-  // Persist dark mode preference across pages (using localStorage)
-  if (localStorage.getItem('dark-mode') === 'enabled') {
+if (localStorage.getItem('dark-mode') === 'enabled') {
     body.classList.add('dark-mode');
     toggleMode.checked = true;
-  }
+}
 
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const profileImage = document.getElementById('profile-picture');
     const workEntries = document.querySelectorAll('.work-entry');
     profileImage.addEventListener('click', function () {
