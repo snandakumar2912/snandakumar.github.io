@@ -1,0 +1,305 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Default background color */
+    color: #333; /* Default text color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid #fff;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .mode-label {
+    margin-left: 10px;
+  }
+  
+ /* Home Page */
+#home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .profile img {
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile img:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .about {
+    max-width: 500px;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #home.dark-mode {
+    /* Dark mode styles for the Home Page */
+    border: 1px solid #fff;
+  }
+  
+ /* Education History */
+ #education {
+    text-align: center;
+    padding: 50px;
+}
+
+.education-entry {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.education-entry h3 {
+    color: #333;
+}
+
+/* Dark mode styling for education entries */
+body.dark-mode .education-entry {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .education-entry h3 {
+    color: #ffd700; /* Change this to your preferred color for the university name in dark mode */
+}
+
+/* Responsive styling for education entries */
+@media (min-width: 600px) {
+    .education-entry {
+        width: 50%;
+        display: inline-block;
+    }
+}
+  
+#work {
+    text-align: center;
+    padding: 50px;
+}
+
+.work-entry {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.work-entry h3 {
+    color: #333;
+}
+
+.company-logo {
+    max-width: 100px; /* Adjust the max width as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Dark mode styling for work entries */
+body.dark-mode .work-entry {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .work-entry h3 {
+    color: #ffd700; /* Change this to your preferred color for the company name in dark mode */
+}
+
+/* Projects Section */
+#projects {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .project-entry {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .project-entry h3 {
+    color: #333;
+  }
+  
+  /* Dark mode styling for projects entries */
+  body.dark-mode #projects {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode .project-entry {
+    background-color: #444;
+    border-color: #666;
+  }
+  
+  body.dark-mode .project-entry h3 {
+    color: #ffd700; /* Change this to your preferred color for the project name in dark mode */
+  }
+  
+/* Contact Page styling */
+#contact {
+    text-align: center;
+    padding: 50px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Dark mode styling for contact form */
+body.dark-mode #contact {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode form {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #555; /* Change this color to your preferred input background color in dark mode */
+    color: #fff; /* Change this color to your preferred text color in dark mode */
+    border: 1px solid #777; /* Change this color to your preferred border color in dark mode */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer__contact-item {
+    text-align: center;
+  }
+  
+  .footer__contact-icon {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+  .footer__contact-subtitle {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px; /* Adjust the margin as needed */
+  }  
+  
+  .footer__copy {
+    text-align: center;
+  }
